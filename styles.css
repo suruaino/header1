@@ -14,10 +14,14 @@ header{
     align-items: flex-end;
     justify-content: space-between;
     padding: 1rem;
-
+    margin-top: -10px;
     background-color: #9898ff;
-
-    animation: on-scroll 5s linear;
+    position: sticky;
+    top: 0;
+    animation: on-scroll 5s forwards;
+    -webkit-animation-timeline: view();
+    -webkit-animation-range-start: 200px;
+    -webkit-animation-range-end: 100%;
 
 }
 .logo{
@@ -54,8 +58,7 @@ header{
 
 @keyframes on-scroll {
     100%{
-        header{
-            background-color: black;
-        }
+        background-color: black;
+        margin-top: 0;
     }
 }
