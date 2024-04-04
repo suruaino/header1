@@ -14,14 +14,16 @@ header{
     align-items: flex-end;
     justify-content: space-between;
     padding: 1rem;
-    margin-top: -10px;
-    background-color: #9898ff;
+    /* margin-top: -40px; */
+    background-color: transparent;
+    border-bottom: 1px solid #000;
     position: sticky;
     top: 0;
+
     animation: on-scroll 5s forwards;
-    -webkit-animation-timeline: view();
-    -webkit-animation-range-start: 200px;
-    -webkit-animation-range-end: 100%;
+    animation-timeline: view();
+    animation-range-start: 70vh;
+    animation-range-end: 120vh;
 
 }
 .logo{
@@ -53,12 +55,21 @@ header{
 }
 .li-container li a{
     text-decoration: none;
-    color: #ffffff;
+    color: black;
+
+    animation: link 0.5s forwards;
 }
 
 @keyframes on-scroll {
     100%{
         background-color: black;
         margin-top: 0;
+        color: #fff;
+    }
+}
+@keyframes link{
+    100%{
+        
+        color: #fff;
     }
 }
