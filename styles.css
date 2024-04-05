@@ -82,6 +82,10 @@ header{
     display: grid;
     place-items: center;
 }
+
+.hero h1{
+    font-size: 3rem;
+}
 .container{
     width: 95%;
     display: grid;
@@ -162,6 +166,9 @@ header{
 }
 
 @media (min-width: 600px) {
+    .hero h1{
+        font-size: 4rem;
+    }
     .container{
         padding-block: 1rem;
     }
