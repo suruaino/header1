@@ -91,6 +91,7 @@ header{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     place-items: center;
+    padding-block: 0;
 }
 .detailed-content{
     width: 100%;
@@ -120,8 +121,9 @@ header{
 
 }
 .imgbx img{
-    /* max-width: 800px; */
+    /* aspect-ratio: 1; */
     border-radius: 20px;
+    width: 100%;
 }
 /**====THIS IS WHERE THE IMAGE GALLERY BEGINGS ====**/
 .gallery{
@@ -145,11 +147,13 @@ header{
     filter: grayscale();
     transition: all 0.5s;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 400px;
+    
 }
 .gallery__images img:hover{
     filter: none;
-    transform: scale(1.005);
+    z-index: 10;
+    border-radius: 10px;
 }
 @keyframes on-scroll {
     100%{
@@ -167,7 +171,8 @@ header{
 
 @media (min-width: 600px) {
     .hero h1{
-        font-size: 4rem;
+        font-size: 3.5rem;
+        line-height: 4.5rem;
     }
     .container{
         padding-block: 1rem;
@@ -181,5 +186,10 @@ header{
        
         object-fit: cover;
         aspect-ratio: 2/1;
+    }
+}
+@media (min-width: 840px) {
+    .hero h1{
+        font-size: 4rem;
     }
 }
